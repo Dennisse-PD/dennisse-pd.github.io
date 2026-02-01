@@ -233,46 +233,32 @@
         margin-top: 1em;
     }
 }
-/* ===== FORCE CV TECHNICAL SKILLS LAYOUT (BOTTOM OF FILE) ===== */
+/* ===== CV: TECHNICAL SKILLS (matches your HTML exactly) ===== */
 
-/* Center the section container (works for either class-based or id-based markup) */
-#technical-skills,
+/* Center the whole section */
 .cv-section.skills {
-    margin-left: auto !important;
-    margin-right: auto !important;
     max-width: 50em;
-    padding-left: 2em;
-    padding-right: 2em;
+    margin: 0 auto;
+    padding: 0 2em;
 }
 
-    /* Center the title line (works whether you used header.major or your custom wrapper) */
-    #technical-skills header,
-    #technical-skills .cv-section-title,
-    .cv-section.skills header,
-    .cv-section.skills .cv-section-title,
-    #technical-skills header.major,
-    .cv-section.skills header.major {
-        display: flex !important;
-        justify-content: center !important;
-        width: 100% !important;
-        text-align: center !important;
-    }
-
-    #technical-skills h3,
-    .cv-section.skills h3 {
-        display: inline-flex !important;
-        align-items: center !important;
-        justify-content: center !important;
+    /* Center the "Technical Skill" title (icon + text) */
+    .cv-section.skills > h3 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         gap: 0.5em;
         width: 100%;
-        text-align: center !important;
+        text-align: center;
     }
 
-    /* Force the 2-column layout */
-    #technical-skills .skills-grid,
-    .cv-section.skills .skills-grid,
-    #technical-skills .skills,
-    .cv-section.skills .skills {
+        /* Force icon red */
+        .cv-section.skills > h3 .icon {
+            color: #d46a6a !important;
+        }
+
+    /* 2-column grid */
+    .cv-section.skills .skills-grid {
         display: grid !important;
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
         gap: 2rem 3rem !important;
@@ -280,21 +266,10 @@
         margin: 0 auto !important;
     }
 
+/* Mobile: 1 column */
 @media screen and (max-width: 736px) {
-    #technical-skills .skills-grid,
-    .cv-section.skills .skills-grid,
-    #technical-skills .skills,
-    .cv-section.skills .skills {
+    .cv-section.skills .skills-grid {
         grid-template-columns: 1fr !important;
     }
 }
 
-/* Force red icons: supports BOTH .icon spans and <i> tags */
-#technical-skills .icon,
-.cv-section.skills .icon,
-#technical-skills i,
-.cv-section.skills i,
-.cv-entry .icon,
-.cv-entry i {
-    color: #d46a6a !important;
-}
