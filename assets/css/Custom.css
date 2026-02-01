@@ -157,51 +157,6 @@
         object-fit: cover;
         transform: translate(-50%, -50%);
     }
-/* CV Section */
-.cv-section.skills {
-    max-width: 50em;
-    margin: 0 auto;
-    padding: 0 2em;
-}
-
-    /* Technical Skills title */
-    .cv-section.skills .cv-section-title {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-
-        .cv-section.skills .cv-section-title h3 {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5em;
-            text-align: center;
-        }
-
-/* Skills grid */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem 3rem;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-/* Skill groups */
-.skill-group {
-    border-left: 3px solid rgba(196, 91, 91, 0.2);
-    padding-left: 1rem;
-}
-
-/* FINAL icon color override */
-.cv-section .icon,
-.cv-entry .icon,
-.cv-section.skills .icon,
-.cv-section.skills .icon.major {
-    color: #d46a6a !important;
-}
-
 
 /* About page base spacing */
 #main section .inner {
@@ -277,4 +232,48 @@
     .about-hero h2 {
         margin-top: 1em;
     }
+}
+/* CV Section */
+.cv-section.skills {
+    max-width: 50em;
+    margin: 0 auto;
+    padding: 0 2em;
+}
+
+    /* Technical Skills title */
+    .cv-section.skills .cv-section-title {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+        .cv-section.skills .cv-section-title h3 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5em;
+            text-align: center;
+        }
+
+/* Skills grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Skill groups */
+.skill-group {
+    border-left: 3px solid rgba(196, 91, 91, 0.2);
+    padding-left: 1rem;
+}
+
+/* FINAL icon color override */
+.cv-section .icon,
+.cv-entry .icon,
+.cv-section.skills .icon,
+.cv-section.skills .icon.major {
+    color: #d46a6a !important;
 }
