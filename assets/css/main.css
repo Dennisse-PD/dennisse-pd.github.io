@@ -3989,34 +3989,7 @@ body.is-mobile #main > header {
 		height: 100%;
 		border: 0;
 	}
-/* CV entries */
-.cv-entry {
-	margin-bottom: 2.5em;
-}
 
-	.cv-entry h4 {
-		margin-bottom: 0.25em;
-	}
-
-.cv-date {
-	display: block;
-	font-size: 0.85em;
-	opacity: 0.7;
-	margin-bottom: 0.75em;
-}
-
-/* Slight separation line (optional) */
-.cv-entry:not(:last-child) {
-	border-bottom: 1px solid rgba(255,255,255,0.1);
-	padding-bottom: 2em;
-}
-
-/* Mobile tightening */
-@media screen and (max-width: 736px) {
-	.cv-entry {
-		margin-bottom: 2em;
-	}
-}
 
 /* Footer */
 
