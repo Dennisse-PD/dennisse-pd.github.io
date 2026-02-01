@@ -1,0 +1,106 @@
+﻿
+/* Banner container */
+#banner {
+    position: relative;
+    overflow: hidden;
+    background: none !important;
+}
+
+/* Video wrapper: fills banner, behind everything */
+.banner-video-wrapper {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+    .banner-video-wrapper video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+/* Overlay between video and text */
+#banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(212, 106, 106, 0.45); /* soft red overlay */
+    z-index: 1;
+}
+
+/* Banner text + button container */
+.banner-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* full height */
+    z-index: 2; /* above overlay and video */
+    text-align: center;
+    color: #fff; /* ensure visibility */
+    padding: 0 2em;
+}
+
+    /* Inner content */
+    .banner-content .inner {
+        margin-bottom: 1em;
+    }
+
+    /* Scroll indicator */
+    .banner-content .more {
+        z-index: 2;
+    }
+.banner-content {
+    outline: 2px solid lime;
+}
+/* Reduce height of wrapper style1 */
+.wrapper.style1 {
+    padding: 3em 0 2em 0; /* top | right | bottom | left */
+}
+/*Mobile Friendly height for wrapper style1*/
+@media screen and (max-width: 736px) {
+    .wrapper.style1 {
+        padding: 2em 1em;
+    }
+}
+/* Responsive YouTube embed */
+.video-container {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 */
+    margin-bottom: 3em;
+}
+
+    .video-container iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+    }
+/* Project page header background */
+#header {
+    background-image: url("2D Galaxy Shooter/images/Header.png");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+.section-divider {
+    margin: 3em auto;
+    width: 70%;
+    border: 0;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+/* LIMIT lightbox image size (override Spectral defaults) */
+#lightbox img,
+.lightbox img,
+.poptrox-popup img {
+    max-width: 900px !important;
+    max-height: 80vh !important;
+    width: auto !important;
+    height: auto !important;
+}
+.poptrox-popup {
+    padding: 2em;
+}

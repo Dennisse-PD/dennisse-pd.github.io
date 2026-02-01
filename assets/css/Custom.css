@@ -1,0 +1,306 @@
+/* Add spacing between stacked images in spotlight */
+.spotlight .image img + img {
+    margin-top: 1em; /* space between the two images */
+}
+/* Section header and description */
+#one h2 {
+    font-size: 2.5em; /* larger main title */
+}
+
+#one p {
+    font-size: 1.25em; /* slightly larger subtext */
+}
+
+/* Icon labels */
+.icons.major li .icon-label {
+    font-size: 1em; /* bigger than before */
+    margin-top: 0.7em; /* add a little spacing from icon */
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 480px) {
+    #one h2 {
+        font-size: 2em;
+    }
+
+    #one p {
+        font-size: 1.1em;
+    }
+
+    .icons.major li .icon-label {
+        font-size: 0.85em; /* scale down on small screens */
+    }
+}
+
+.icons.major {
+    display: flex; /* side by side */
+    flex-wrap: wrap; /* wrap on small screens */
+    justify-content: center; /* center row */
+    gap: 3em; /* horizontal spacing between icons */
+    padding-left: 0; /* remove default ul padding */
+}
+
+    .icons.major li {
+        display: flex;
+        flex-direction: column; /* icon on top, label below */
+        align-items: center;
+        min-width: 80px; /* uniform width */
+    }
+
+        .icons.major li i {
+            font-size: 2.5em;
+            color: #fff;
+        }
+
+        .icons.major li .icon-label {
+            margin-top: 0.5em;
+            font-size: 0.85em;
+            text-align: center;
+            color: #fff;
+        }
+
+/* Mobile adjustments */
+@media screen and (max-width: 480px) {
+    .icons.major {
+        gap: 1.5em; /* smaller spacing on mobile */
+    }
+
+        .icons.major li i {
+            font-size: 2em;
+        }
+
+        .icons.major li .icon-label {
+            font-size: 0.75em;
+        }
+}
+
+#banner {
+    position: relative;
+    height: 100vh; /* height of banner */
+    min-height 10vh;
+    overflow: hidden;
+    display: flex; /* use flexbox */
+    flex-direction: column; /* stack children vertically */
+    justify-content: center; /* center vertically */
+    align-items: center; /* center horizontally */
+    text-align: center;
+}
+
+    #banner .banner-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+    }
+
+    #banner::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(212, 106, 106, 0.45); /* optional overlay */
+        z-index: 1;
+    }
+
+    #banner .inner {
+        position: relative;
+        z-index: 2; /* above video + overlay */
+        color: #fff;
+        padding: 0 2em;
+    }
+
+#technical-skills {
+    padding: 2.5rem 1.5rem; /* reduces vertical & horizontal space */
+    max-width: 900px; /* keeps it from stretching too wide */
+    margin: 0 auto; /* centers the section */
+}
+
+
+
+/* Project description list */
+.project-details {
+    margin: 1.5em 0;
+    padding-left: 1.2em;
+}
+
+    .project-details li {
+        margin-bottom: 0.6em;
+    }
+
+/* Project buttons layout */
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75em;
+}
+
+    .project-actions li {
+        margin: 0;
+    }
+
+/* Spotlight image container */
+.spotlight .image {
+    position: relative;
+    overflow: hidden;
+}
+
+    /* Spotlight video behaves like Spectral image */
+    .spotlight .image video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: translate(-50%, -50%);
+    }
+/* CV entries */
+.cv-entry {
+    margin-bottom: 2.5em;
+}
+
+    .cv-entry h4 {
+        margin-bottom: 0.25em;
+    }
+
+.cv-date {
+    display: block;
+    font-size: 0.85em;
+    opacity: 0.7;
+    margin-bottom: 0.75em;
+}
+
+/* Slight separation line (optional) */
+.cv-entry:not(:last-child) {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 2em;
+}
+
+/* Mobile tightening */
+@media screen and (max-width: 736px) {
+    .cv-entry {
+        margin-bottom: 2em;
+    }
+}
+/* About page base spacing */
+#main section .inner {
+    max-width: 900px; /* keeps text readable on large screens */
+    margin: 0 auto;
+}
+
+/* Paragraph rhythm */
+#main section p {
+    margin-bottom: 1.25em;
+    line-height: 1.7;
+    font-size: 1.05em;
+}
+/* About section titles */
+#main header.major h3 {
+    margin-bottom: 0.75em;
+    font-size: 1.5em;
+}
+
+    /* Icon + title alignment */
+    #main header.major h3 .icon {
+        margin-right: 0.5em;
+        color: #d46a6a; /* soft red accent */
+    }
+/* Gentle separation between About sections */
+#main section.wrapper {
+    padding: 4em 0;
+}
+
+@media screen and (max-width: 736px) {
+    #main section.wrapper {
+        padding: 3em 0;
+    }
+}
+/* Sentimental section tone */
+.wrapper.style2 {
+    background-color: rgba(212, 106, 106, 0.08);
+}
+
+.pull-quote {
+    font-style: italic;
+    font-size: 1.1em;
+    padding-left: 1.5em;
+    border-left: 3px solid #d46a6a;
+    margin: 2em 0;
+    opacity: 0.9;
+}
+/* About page hero section */
+.about-hero .image img {
+    border-radius: 8px;
+    max-width: 100%;
+}
+
+/* Slightly constrain image size on large screens */
+@media screen and (min-width: 980px) {
+    .about-hero .image {
+        max-width: 350px;
+    }
+}
+
+/* Improve spacing between image and text */
+.about-hero .content {
+    padding-left: 2em;
+}
+
+/* Mobile-friendly adjustments */
+@media screen and (max-width: 736px) {
+    .about-hero .content {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .about-hero h2 {
+        margin-top: 1em;
+    }
+}
+/* CV Section */
+.cv-section.skills {
+    max-width: 50em;
+    margin: 0 auto;
+    padding: 0 2em;
+}
+
+    /* Technical Skills title */
+    .cv-section.skills .cv-section-title {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+        .cv-section.skills .cv-section-title h3 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5em;
+            text-align: center;
+        }
+
+/* Skills grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Skill groups */
+.skill-group {
+    border-left: 3px solid rgba(196, 91, 91, 0.2);
+    padding-left: 1rem;
+}
+
+/* FINAL icon color override */
+.cv-section .icon,
+.cv-entry .icon,
+.cv-section.skills .icon,
+.cv-section.skills .icon.major {
+    color: #d46a6a !important;
+}
